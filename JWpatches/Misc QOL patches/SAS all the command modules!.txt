@@ -1,0 +1,9 @@
+// adds max SAS modules to ALL the command pods and probes
+// WARNING! BREAKS PROGRESSION
+
+@PART[*]:AFTER[RemoteTech]:HAS[@MODULE[ModuleCommand] , [!MODULE[ModuleSAS]]]
+	{
+		%MODULE[ModuleSAS] {
+		%SASServiceLevel = 3
+		}
+	}
